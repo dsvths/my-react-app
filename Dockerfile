@@ -5,7 +5,7 @@ WORKDIR /app
 COPY . .
 RUN npm ci
 COPY . ./
-RUN npm run build
+RUN npm run
 # production environment
 FROM nginx:stable-alpine
 COPY --from=build /app/build /usr/share/nginx/html
