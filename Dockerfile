@@ -4,6 +4,7 @@ WORKDIR /app
 # ENV PATH /app/node_modules/.bin:$PATH
 COPY . .
 RUN npm ci
+COPY . ./
 RUN npm run build
 # production environment
 FROM nginx:stable-alpine
