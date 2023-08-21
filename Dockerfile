@@ -3,7 +3,7 @@ FROM node:13.12.0-alpine as build
 WORKDIR /app
 # ENV PATH /app/node_modules/.bin:$PATH
 COPY . .
-RUN npm ci
+RUN npm install
 RUN npm install react-scripts@3.4.1 -g
 # COPY . .
 RUN npm run build
